@@ -4,34 +4,50 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Модерн</title>
-        <link rel="stylesheet" href="./styles/fonts.css" />
         <link rel="stylesheet" href="./styles/global.css" />
         <link rel="stylesheet" href="./styles/variables.css" />
         <link rel="stylesheet" href="./styles/anim.css" />
         <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="./scripts/script.js"></script>
     </head>
     <body>
         <header class="header">
-            <div>
+            <div class="logo">
                 LOGO
             </div>
-            <nav class="menu_card">
-                <ul class="menu">
-                    <li>
-                        <a class="link" href="">к началу</a>
-                    </li>
-                    <li>
-                        <a class="link" href="">горизонтальные карточки</a>
-                    </li>
-                    <li>
-                        <a class="link" href="">обычные карточки</a>
-                    </li>
-                </ul>
+            <nav class="desk_menu_card">
+                <ul class="desk_menu">
+                    <li><a class="menu_link" href="#">в начало</a></li>
+                    <li><a class="menu_link" href="#horisontal">горизонтальные карточки</a></li>
+                    <li><a class="menu_link" href="#vertical">вертикальные карточки</a></li>
+                  </ul>
             </nav>
+            <button
+        onclick="window['menu-dialog'].showModal()"
+        class="menu_mobile header__menu-button header__menu-button_cmd_open">
+      </button>
+      <dialog id="menu-dialog" class="header__menu">
+        <ul class="menu-line">
+          <li><a onclick="window['menu-dialog'].close()" href="#">в начало</a></li>
+          <li><a onclick="window['menu-dialog'].close()" href="#horisontal">горизонтальные карточки</a></li>
+          <li><a onclick="window['menu-dialog'].close()" href="#vertical">вертикальные карточки</a></li>
+        </ul>
+        <button
+          onclick="window['menu-dialog'].close()"
+          class="menu-button_close">
+          <span>Закрыть</span>
+        </button>
+      </dialog>
         </header>
-        <main>
+        <main class="main">
+            <section class="hero">
+                <h1 class="hero_text">ибо весь закон в одном слове заключается:<br> <span>люби ближнего твоего, как самого себя.</span></h1>
+            </section>
             <section id="horisontal" class="section">
-
                 <article class="card">
                     <div class="card_img">
                         <img src="./img/leander-lenzing-vpOJwXxxpJ4-unsplash.jpg" class="img">
@@ -85,12 +101,67 @@
                 </article>
 
             </section>
-            <section class="section">
-
+            <section id="vertical" class="section_vertical">
+                <article class="card vertical">
+                    <div class="card_img card_img_vert">
+                        <img src="./img/vert1.jpg" class="img">
+                    </div>
+                    <div class="card_text ">
+                        <h3>
+                            Я принял это имя, чтобы не усложнять дела
+                        </h3>
+                        <p>
+                            Брайони кивнула и отвернулась, якобы охваченная трагическим отчаянием. Теперь настала очередь Лолы обнять Брайони за плечи, и та могла бы поучиться у кузины сдержанности.
+                        </p>
+                        <a class="button_card" href="#"><span class="button_link">интересно</span></a>
+                    </div>
+                </article>
+                <article class="card vertical">
+                    <div class="card_img card_img_vert">
+                        <img src="./img/vert2.jpg" class="img">
+                    </div>
+                    <div class="card_text ">
+                        <h3>
+                            Иван тряхнул головой
+                        </h3>
+                        <p>
+                            Иван не ответил, так как счел это приветствие в данных условиях неуместным. В самом деле, засадили здорового человека в лечебницу, да еще делают вид, что это так и нужно!
+                        </p>
+                        <p class="quote">
+                            «Может, вы видите что-то конкретное в этих китайских тенях, какие-то сцены, крылья истории-мельницы, какой-нибудь свихнувшийся эллипс?»
+                        </p>
+                    </div>
+                </article>
+                <article class="card vertical">
+                    <div class="card_img card_img_vert">
+                        <img src="./img/vert3.jpg" class="img">
+                    </div>
+                    <div class="card_text ">
+                        <h3>
+                            Maman играла второй концерт Фильда
+                        </h3>
+                        <p>
+                            Maman часто играла эти две пьесы; поэтому я очень хорошо помню чувство, которое они во мне возбуждали. Чувство это было похоже на воспоминание
+                        </p>
+                    </div>
+                </article>
+                <article class="card vertical">
+                    <div class="card_img card_img_vert">
+                        <img src="./img/vert4.jpg" class="img">
+                    </div>
+                    <div class="card_text ">
+                        <h3>
+                            Что же я могу вам рассказать?
+                        </h3>
+                        <p>
+                            Конечно, я задал глупый вопрос, — ответил со смехом Грам. — Можно подумать, что я совсем забыл, что значит быть молодым и влюбленным, не правда ли?
+                        </p>
+                    </div>
+                </article>
             </section>
         </main>
-        <footer>
-
+        <footer class="footer">
+            <p>Сделал начинающий/обучающийся фронтендер, сильно не пинать, а то заплачу</p>
         </footer>
     </body>
 </html>
