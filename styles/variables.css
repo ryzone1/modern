@@ -1,8 +1,63 @@
-:root {
-    --main-color: #E9ECEF;
-    --card-color: #F8F9FA;
-    --accent: #495057;
-    --white: #F8F9FA;
-    --black: #212529;
-    --outline-color: #CED4DA;
+
+
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-color: #E9ECEF;
+        --card-color: #F8F9FA;
+        --accent: #495057;
+        --white: #F8F9FA;
+        --black: #212529;
+        --outline-color: #CED4DA;
+        --button-background: #495057;
+        --button-hover: #212529;
+        --button-text: #F8F9FA;
+        --hero-text: #F8F9FA;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-color: #212529;
+        --card-color: #495057;
+        --accent: #6C757D;
+        --white: #495057;
+        --black: #F8F9FA;
+        --outline-color: #343A40;
+        --button-background: #CED4DA;
+        --button-hover: #F8F9FA;
+        --button-text: #212529;
+        --hero-text: #F8F9FA;
+    }
+
+    .img {
+        filter: brightness(50%);
+    }
+
+    .hero {
+        filter: brightness(60%);
+    }
+
+    .card_text h3 {
+        font-weight: 900;
+    }
+
+    html body {
+        font-weight: 400;
+    }
+}
+
+@media (prefers-color-scheme: no-preference) {
+    :root {
+        --main-color: #E9ECEF;
+        --card-color: #F8F9FA;
+        --accent: #495057;
+        --white: #F8F9FA;
+        --black: #212529;
+        --outline-color: #CED4DA;
+        --button-background: #495057;
+        --button-hover: #212529;
+        --button-text: #F8F9FA;
+        --hero-text: #F8F9FA;
+    }
 }

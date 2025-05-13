@@ -18,6 +18,7 @@ body {
     font-size: clamp(0.8rem, 0.7103rem + 0.3825vw, 1.2rem);
 }
 
+
 .main {
     display: flex;
     flex-direction: column;
@@ -60,7 +61,7 @@ body {
 
 .hero_text {
     display: block;
-    color: var(--card-color);
+    color: var(--hero-text);
     font-family: "Noto Serif Display", serif;
     text-align: center;
     font-size: clamp(2rem, 1.5517rem + 1.9127vw, 4rem);
@@ -191,6 +192,21 @@ body {
     padding: 2.3svw;
 }
 
+.section::-webkit-scrollbar {
+    inline-size: 90svw;
+    block-size: 1svh;
+  }
+  
+  .section::-webkit-scrollbar-track {
+    background: var(--outline-color); 
+    border-radius: 5px;
+  }
+  
+  .section::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+    border-radius: 5px;       
+  }
+
 .section_vertical {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -280,8 +296,8 @@ body {
     border-radius: 7px;
     min-inline-size: 50%;
     min-block-size: 5svh;
-    background-color: var(--accent);
-    color: var(--card-color);
+    background-color: var(--button-background);
+    color: var(--button-text);
     transition: transform 0.3s, background-color 0.5s;
     outline: 1px solid var(--outline-color);
 }
@@ -292,6 +308,7 @@ body {
     text-transform: uppercase;
     font-family: "Noto Serif Display", serif;
     letter-spacing: 0.2rem;
+    color: var(--white);
 }
 
 
@@ -310,7 +327,7 @@ body {
 
 .button_card:hover {
     transform: scale(1.01);
-    background-color: var(--black);
+    background-color: var(--button-hover);
 }
 
 .quote {
